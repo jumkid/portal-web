@@ -7,14 +7,16 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import indexRouter from './routes/index.mjs';
-import contactRouter from './routes/contact-us.mjs';
+import carOwnerRouter from './routes/car-owner.mjs';
+import professionalRouter from './routes/professional.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const setRouters = (app) => {
   app.use("/", indexRouter);
-  app.use("/contact", contactRouter);
+  app.use("/professional", professionalRouter);
+  app.use("/car-owner", carOwnerRouter);
 }
 
 const App = {

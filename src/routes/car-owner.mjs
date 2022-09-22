@@ -2,11 +2,14 @@ import express from 'express';
 
 const router = express.Router();
 
-/* GET home page. */
+const carList = [1, 2, 3, 4];
+
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
+    res.render('car-owner', {
     layout: 'main',
-    title: 'Jumkid'
+    title: 'Jumkid',
+    cars: carList
   });
 });
 

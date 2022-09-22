@@ -17,10 +17,27 @@ body {
 	width: 100%;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
-	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;	
 }
-#content {
-	margin:0 0 0 20px;
+#content-about {
+	height: 100%;
+	padding: 18px 0px 0px 20px;
+	margin:0px 0px 0px 0px;
+	color: #ffffff;
+	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;
+}
+#content-car-owner {
+	height: 100%;
+	padding: 18px 0px 0px 20px;
+	margin:0px 0px 0px 0px;
+	color: #ffffff;
+	background:url(../images/wp-owner-garage.jpg) no-repeat top center #000000;
+}
+#content-professional {
+	height: 100%;
+	padding: 18px 0px 0px 20px;
+	margin:0px 0px 0px 0px;
+	color: #ffffff;
+	background:url(../images/wp-workshop.jpg) no-repeat top center #000000;
 }
 
 #header {
@@ -29,7 +46,7 @@ body {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     float: none;
-	background-color: #AC373C;
+	background-color: #D0282F;
 }
 #header h1 
 {
