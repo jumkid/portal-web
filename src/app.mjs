@@ -9,6 +9,7 @@ import logger from 'morgan';
 import indexRouter from './routes/index.mjs';
 import carOwnerRouter from './routes/car-owner.mjs';
 import professionalRouter from './routes/professional.mjs';
+import loginRouter from './routes/login.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +18,7 @@ const setRouters = (app) => {
   app.use("/", indexRouter);
   app.use("/professional", professionalRouter);
   app.use("/car-owner", carOwnerRouter);
+  app.use("/login", loginRouter);
 }
 
 const App = {

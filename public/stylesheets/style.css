@@ -140,11 +140,6 @@ body {
     width: 110px;
     text-align: center;
 }
-#navigation ul li .current_page_item a, #navigation ul li .current_page_item a:hover{
-	color:#3A5978;
-	width: 110px;
-	background:url(../images/menu.gif) no-repeat top left;
-}
 	
 footer {
 	clear: both;
@@ -186,9 +181,25 @@ h3 {
 	font-size:14px;	
 }
 
-/* badge */
-.badge {
+/* feature-bar and badge */
+.feature-bar {
 	display: inline-block;
+	width: 393px;
+	height: 104px;
+	margin: 0px 5px;
+	padding: 0px 0px 0px 0px;
+	background-color: #ffffff;
+	border-radius: 56px 56px 56px 56px;
+	color: #000000;
+	vertical-align: middle;
+}
+.feature-bar-title {
+	float: left;
+	padding: 40px 10px;
+	font-size: 24px;
+}
+.badge {
+	float: left;
 	width: 83px;
 	height: 83px;
 	background-repeat: no-repeat;
@@ -199,7 +210,31 @@ h3 {
 	border: 6px solid #C41407;
 	resize: both;
 }
-/* badge end*/
+
+/* feature-bar & badge end */
+
+.login-button {
+	float: right;
+    width: 93px;
+    height: 38px;
+    margin: 7px 13px;
+    padding: 0px 0px 0px 0px;
+    background-color: #ffffff;
+    border-radius: 56px 56px 56px 56px;
+    vertical-align: middle;
+    background-image: url(../images/icon-login.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.login-button a{
+	color: #000000;
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 36px;
+}
+.login-button a:hover{
+	color: #C41407;
+}
 
 /* Post Related */
 .post-container
