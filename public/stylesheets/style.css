@@ -10,13 +10,14 @@ body {
 	width: 100%;
 	padding: 0px 0px 0px 0px;	
 	margin: 0px 0px 0px 0px;
+	background-color: #8F939F;
 }
 #main-container {
 	height: 100vh;
 	width: 100%;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
-	background:url(../images/center-wallpaper.jpeg) no-repeat top center;	
+	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;	
 }
 #content {
 	margin:0 0 0 20px;
