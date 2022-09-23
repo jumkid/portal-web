@@ -1,6 +1,7 @@
 import createError from 'http-errors';
 import express from 'express';
 import { engine } from 'express-handlebars';
+import helmet from 'helmet';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cookieParser from 'cookie-parser';
@@ -10,16 +11,19 @@ import indexRouter from './routes/index.mjs';
 import carOwnerRouter from './routes/car-owner.mjs';
 import professionalRouter from './routes/professional.mjs';
 import loginRouter from './routes/login.mjs';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import privacyPolicyRouter from './routes/privacy-policy.mjs';
 
 const setRouters = (app) => {
   app.use("/", indexRouter);
   app.use("/professional", professionalRouter);
   app.use("/car-owner", carOwnerRouter);
   app.use("/login", loginRouter);
+  app.use("/privacy-policy", privacyPolicyRouter);
 }
+
+// resolve global variables vaule for ES6
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const App = {
 
@@ -43,6 +47,8 @@ const App = {
     app.use(express.urlencoded({ extended: false }));
     app.use(cookieParser());
     app.use(express.static(path.join(__dirname, '../public')));
+
+    app.use(helmet());
 
     // routers
     setRouters(app);

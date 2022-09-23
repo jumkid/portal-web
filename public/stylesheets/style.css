@@ -6,38 +6,45 @@ body {
 }
 
 #wrap {
-	clear: both;     
+	clear: both;
 	width: 100%;
+	height: 100vh;
 	padding: 0px 0px 0px 0px;	
 	margin: 0px 0px 0px 0px;
 	background-color: #8F939F;
 }
 #main-container {
-	height: 100vh;
 	width: 100%;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
 }
 #content-about {
 	height: 100%;
-	padding: 18px 0px 0px 20px;
+	padding: 18px 0px 18px 20px;
 	margin: 0px 0px 0px 0px;
 	color: #ffffff;
 	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;
 }
 #content-car-owner {
 	height: 100%;
-	padding: 18px 0px 0px 20px;
+	padding: 18px 0px 18px 20px;
 	margin: 0px 0px 0px 0px;
 	color: #ffffff;
 	background:url(../images/wp-owner-garage.jpg) no-repeat top center #000000;
 }
 #content-professional {
 	height: 100%;
-	padding: 18px 0px 0px 20px;
+	padding: 18px 0px 18px 20px;
 	margin:0px 0px 0px 0px;
 	color: #ffffff;
 	background:url(../images/wp-workshop.jpg) no-repeat top center #000000;
+}
+#content-privacy {
+	font-size: 18px;
+	padding: 18px 0px 18px 20px;
+	margin: 0px 0px 0px 0px;
+	color: #000000;
+	background-color: #000000;
 }
 
 #content-center {
@@ -122,23 +129,22 @@ body {
 	display: block;
 	float: left;
 	margin: 0px 0px;
-	width: 110px;
+	padding: 0px 0px;
 }
 #navigation ul li a{
 	display:block;
 	float:left;
 	color:#ffffff;
 	height: 36px;
-	padding: 17px 0px 0px 0px;
-	width: 110px; 
+	padding: 17px 10px 0px 10px;
 	text-align: center;
 	text-decoration:none;
 }
 #navigation ul li a:hover, #navigation ul li.current_page_item a{
 	color: #4d4d4d;
     background-color: #f4d2cb;
-    width: 110px;
     text-align: center;
+	padding: 17px 10px 0px 10px;
 }
 	
 footer {
@@ -289,45 +295,42 @@ h3 {
 
 
 .postinfo {
-width:560px;
-clear:both;
-color:#111111;
-font-size:11px;
-padding:5px 10px 0 10px;
-line-height:40px;
+	width:560px;
+	clear:both;
+	color:#111111;
+	font-size:11px;
+	padding:5px 10px 0 10px;
+	line-height:40px;
 }
 
 .postinfo a {
-text-decoration:none;
-color:#C41407;
+	text-decoration:none;
+	color:#C41407;
 }
 
 .postinfo a:hover {
-color:#C41407;
-text-decoration:underline;
+	color:#C41407;
+	text-decoration:underline;
 }
 
 .postinfo .posted {
-float:left;
-background:url(../images/filled.gif) no-repeat left;
-padding-left:18px;
-padding-bottom:10px;
-margin-right:0px;
+	float:left;
+	background:url(../images/filled.gif) no-repeat left;
+	padding-left:18px;
+	padding-bottom:10px;
+	margin-right:0px;
 }
-
-
 
 .postinfo .published {
-float:right;
-background:url(../images/date.gif) no-repeat left;
-padding-left:20px;
-width:120px;
-padding-bottom:10px;
-margin-right:0px;
+	float:right;
+	background:url(../images/date.gif) no-repeat left;
+	padding-left:20px;
+	width:120px;
+	padding-bottom:10px;
+	margin-right:0px;
 }
 
-.postbottom
-{
+.postbottom {
 	font-size:11px;
 	color:#C41407;
 	text-align:left;
@@ -337,30 +340,29 @@ margin-right:0px;
 	background:url(../images/post-bottom.gif) no-repeat bottom left;
 	
 }
-.postbottom a
-{
-text-decoration:none;
-color:#111111;	
+
+.postbottom a {
+	text-decoration:none;
+	color:#111111;	
 }
-.postbottom a:hover
-{
-text-decoration:underline;
-color:#111111;
+.postbottom a:hover {
+	text-decoration:underline;
+	color:#111111;
 }
 .postbottom .comments {
-float:right;
-background:url(../images/comments.gif) no-repeat left bottom;
-height:16px;
-position:relative;
-padding:15px 20px 0 20px;
+	float:right;
+	background:url(../images/comments.gif) no-repeat left bottom;
+	height:16px;
+	position:relative;
+	padding:15px 20px 0 20px;
 }
 .postbottom .rssfeed {
-float:left;
-display:none;
-background:url(../images/rssfeed.gif) no-repeat left ;
-height:16px;
-padding:13px 0 0 20px;
-margin-left:7px;
+	float:left;
+	display:none;
+	background:url(../images/rssfeed.gif) no-repeat left ;
+	height:16px;
+	padding:13px 0 0 20px;
+	margin-left:7px;
 }
 
 .navigation a {
@@ -679,43 +681,4 @@ float:left;
 	position:relative;
 	top:-1px;
 	font-weight:bold;
-}
-/*-------------Other------------------*/
-hr {
-	display: none;
-}
-a 
-{
-	color:#ffffff;
-}
-#wp-calendar
-{
-width:150px;
-color:#ffffff;	
-margin-left:5px;
-text-align:center;
-}
-#calendar
-{
-
-}
-td
-{
-color:#999999;
-}
-#aboutus{
-float:left;
-width:320px;
-height:150px;
-color:#8E929E;
-padding:20px;
-padding-top:5px;
-overflow:hidden;
-position:absolute;
-top:200px;
-left:630px;
-}
-#aboutus a{
-color:#ffffff;
-text-decoration:none;
 }
