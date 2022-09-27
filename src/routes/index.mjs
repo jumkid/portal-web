@@ -6,7 +6,8 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {
     layout: 'main',
-    title: 'Jumkid'
+    title: 'Jumkid',
+    navTabIndex: true
   });
 });
 

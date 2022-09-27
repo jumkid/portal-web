@@ -10,14 +10,14 @@ import logger from 'morgan';
 import indexRouter from './routes/index.mjs';
 import carOwnerRouter from './routes/car-owner.mjs';
 import professionalRouter from './routes/professional.mjs';
-import loginRouter from './routes/login.mjs';
+import signupRouter from './routes/signup.mjs';
 import privacyPolicyRouter from './routes/privacy-policy.mjs';
 
 const setRouters = (app) => {
   app.use("/", indexRouter);
   app.use("/professional", professionalRouter);
   app.use("/car-owner", carOwnerRouter);
-  app.use("/login", loginRouter);
+  app.use("/signup", signupRouter);
   app.use("/privacy-policy", privacyPolicyRouter);
 }
 

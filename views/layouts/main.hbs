@@ -6,12 +6,18 @@
     <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico"/>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+
+  <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.showPassword.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="/scripts/jk-core.js"></script>
+
   <body>
     <div id="wrap">
       {{{body}}}
-      <footer>
-          <div class="footerlinks"> Copyright Ⓒ 2022 <a href="http://legal.jumkid.com">jumkid.com</a> All rights reserved | <a href="privacy-policy">Privacy Policy</a> | </div>
-      </footer>
+
+      {{> footer }}
+
     </div>
   </body>
 </html>

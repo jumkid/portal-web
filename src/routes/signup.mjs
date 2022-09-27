@@ -4,9 +4,10 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('login', {
+  res.render('signup', {
     layout: 'main',
-    title: 'Jumkid - User Login'
+    title: 'Jumkid - User Signup',
+    navTabCarOwner: true
   });
 });
 

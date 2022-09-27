@@ -1,17 +1,5 @@
 <div id="main-container">
-  <div id="header">
-    <div id="navigation-container">
-      <div id="navigation-logo">&nbsp;</div>
-      <div id="navigation">
-        <ul>
-          <li><a href="/">About</a></li>
-          <li class="current_page_item"><a href="car-owner">Car Owner</a></li>
-          <li><a href="professional">Professional</a></li>
-        </ul>
-      </div>
-      <div class="login-button"><a href="login">Login</a></div>
-    </div>
-  </div>
+  {{> header}}
 
   <div id="content-car-owner">
     <div id="content-center" style="width: 860px; height: 660px;">
@@ -40,8 +28,8 @@
         <div style="padding: 30px 0px;"><i>"Owning a vehicle is one of the greatest experience in life. "</i></div>
 
         <div>Sign up now to get handy tools to help you manage all your vehicles in the garage</div>
-        <div><a href="">Sign Up</a></div>
-        <div><h3>If you already have an account <a href="">Log in</a> here</h3></div>
+        <div class="signup-button"><a href="/signup">Sign Up</a></div>
+        <div>If you already have an account <a href="">Log in</a> here</div>
       </div>
   </div>
 </div>
