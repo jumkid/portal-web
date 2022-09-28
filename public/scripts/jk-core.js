@@ -1,70 +1,4 @@
 (function($) {
-    $(document).ready(function() {
-        // $(':password').showPassword({
-        //     linkRightOffset: 5,
-        //     linkTopOffset: 11
-        // });
-
-        $.validator.addMethod("pwcheck", function(value) {
-            return /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&])(.{6,20}$)/.test(value) // consists of only these
-                && /^(?=.*[A-Z])/.test(value) // has a uppercase letter
-                && /^(?=.*[@#$%&])/.test(value) // has a special characters
-        });
-
-        $("#signup_form").validate({
-            rules: {
-                username: {
-                    required: true,
-                    minlength: 2
-                },
-                email: {
-                    required: true,
-                    email: true,
-                },
-                pswd: {
-                    required: true,
-                    minlength: 6,
-                    maxlength: 20,
-                    pwcheck: true
-                },
-                cpswd: {
-                    required: true,
-                    equalTo: "#signup_form input[name=password]"
-                }
-            },
-
-            messages: {
-                username:  {
-                    required: "✖",
-                    minlength: "minimum 2 characters"
-                },
-                email: {
-                    required: "✖",
-                    email: "not valid"
-                },
-                pswd:  {
-                    required: "✖",
-                    minlength: "minimum 6 characters",
-                    maxlength: "maximum 20 characters",
-                    pwcheck: "1 uppercase 1 special character"
-                },
-                cpswd:  {
-                    required: "✖",
-                    equalTo: "not match"
-                }
-            },
-
-            submitHandler: function() {
-                console.log("validate form");
-
-                const signUpApi = $.JK.getApiUrl($.JK.API.USER.SIGNUP);
-                console.log( "API calling : " + signUpApi );
-                event.preventDefault();
-            }
-        });
-
-    });
-
     // global single instance object
     $.JK = {
 
@@ -85,21 +19,8 @@
         },
 
         getApiUrl: function(api, params, noPrefix) {
-            const regEx = /[-_\w]+/g;
+            const regEx = /{[-_\w]+}/g;
             let url = (!noPrefix) ? $.JK.API.HOST + api : api;
-            url = url.replace(regEx, function(str) {
-                const match = /[-_\w]+/g.exec(str);
-                if (params && params[match[0]])
-                    return params[match[0]];
-                else
-                    return '';
-            });
-            return url;
-        },
-
-        assembleUrl: function(api, params, noPrefix) {
-            const regEx = /[-_\w]+/g;
-            let url = (!noPrefix) ? this.contextUrl + api : api;
             url = url.replace(regEx, function(str) {
                 const match = /[-_\w]+/g.exec(str);
                 if (params && params[match[0]])
@@ -153,6 +74,28 @@
 
             return json;
         },
+
+        doPost: function(url, jsonData, successCallback, failCallback) {
+            $.ajax({
+                type: "POST",
+                url: url,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsonData),
+                success: function(data, status, xhr) {
+                    successCallback(data, status);
+
+                    $.JK.checkoutProgress();
+                    return this;
+                },
+                error: function(xhr, status, error){
+                    failCallback(xhr.responseJSON, status);
+
+                    $.JK.checkoutProgress();
+                    return this;
+                }
+            });
+        }
 
     };
 

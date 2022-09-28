@@ -49,6 +49,23 @@ const App = {
     app.use(express.static(path.join(__dirname, '../public')));
 
     app.use(helmet());
+    app.use(helmet.xssFilter());
+    app.use(helmet.contentSecurityPolicy({
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", "data:"],
+        connectSrc: ["'self'", "http://localhost", "https://localhost", "https://api.jumkid.com"],
+        fontSrc: ["'self'"],
+        mediaSrc: ["'self'"],
+        childSrc: ["'self'"],
+        objectSrc:["'self'"]
+      },
+      reportOnly: false,
+      setAllHeaders: false,
+      safari5: false
+    }));
 
     // routers
     setRouters(app);
