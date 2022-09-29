@@ -18,19 +18,6 @@
             }
         },
 
-        getApiUrl: function(api, params, noPrefix) {
-            const regEx = /{[-_\w]+}/g;
-            let url = (!noPrefix) ? $.JK.API.HOST + api : api;
-            url = url.replace(regEx, function(str) {
-                const match = /[-_\w]+/g.exec(str);
-                if (params && params[match[0]])
-                    return params[match[0]];
-                else
-                    return '';
-            });
-            return url;
-        },
-
         /**
          * Submit lock for duplicate submit request by the user
          */
@@ -62,6 +49,19 @@
 
         setContextUrl: function(contextUrl) {
             this.contextUrl = contextUrl;
+        },
+
+        getApiUrl: function(api, params, noPrefix) {
+            const regEx = /{[-_\w]+}/g;
+            let url = (!noPrefix) ? $.JK.API.HOST + api : api;
+            url = url.replace(regEx, function(str) {
+                const match = /[-_\w]+/g.exec(str);
+                if (params && params[match[0]])
+                    return params[match[0]];
+                else
+                    return '';
+            });
+            return url;
         },
 
         convertFormToJSON: function(formId) {

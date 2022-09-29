@@ -1,12 +1,12 @@
 (function($) {
 
     // define namespace for user
-    $.JK.user = {};
+    $.JK.user = {}
 
     $.JK.user.Profile = {
         email: "",
         emailVerified: false,
-        requiredActions: ["VERIFY_EMAIL"],
+        //requiredActions: ["VERIFY_EMAIL"],
         username: "",
         firstName: "",
         lastName: "",
@@ -24,7 +24,8 @@
         //     linkRightOffset: 5,
         //     linkTopOffset: 11
         // });
-        const signupFormId = "signup_form";
+        const signupFormId = "signup-form";
+        const signupForm = $("#" + signupFormId);
 
         $.validator.addMethod("checkUppercase", function(value) {
             return /^(?=.*[A-Z])/.test(value);
@@ -36,11 +37,22 @@
             return /^(?=.*[0-9])/.test(value);
         });
 
-        $("#"+signupFormId).validate({
+        $.JK.user.validator = signupForm.validate({
             rules: {
                 username: {
                     required: true,
-                    minlength: 2
+                    minlength: 2,
+                    // remote: {
+                    //     url: $.JK.getApiUrl($.JK.API.USER.VALIDATE, {username: $("input[name=username]").val()}),
+                    //     type: "GET",
+                    //     success: function(response, textStatus, xhr){
+                    //         if (response.collection.length > 0) $.JK.user.validator.errorList.push({username: "not able to validate"});
+                    //     },
+                    //     error: function(xhr, status, error){
+                    //         $.JK.user.validator.showErrors({username: "not able to validate"});
+                    //     },
+                    //     onkeypress: false
+                    // }
                 },
                 email: {
                     required: true,
@@ -63,7 +75,8 @@
             messages: {
                 username:  {
                     required: "✖",
-                    minlength: "minimum 2 characters"
+                    minlength: "minimum 2 characters",
+                    remote: "not available"
                 },
                 email: {
                     required: "✖",
@@ -100,19 +113,23 @@
                         //TODO
                     }
                 }, (response, status) => {
-                    const errorMsg = response.errorMessage;
+                    if (status === "error") {
+                        const error = response.errorMessage.toLowerCase();
+                        if (/\bemail\b/i.test(error)) $.JK.user.validator.showErrors({email: error});
+                        else if (/\busername\b/i.test(error)) $.JK.user.validator.showErrors({username: error});
+                    }
                 });
             }
         });
 
-        const normalizeUserProfile = (fromData) => {
-            $.JK.user.Profile.username = fromData.username;
-            $.JK.user.Profile.email = fromData.email;
-            $.JK.user.Profile.credentials[0].value = fromData.pswd;
-
-            return $.JK.user.Profile;
-        }
-
     });
+
+    function normalizeUserProfile(fromData) {
+        $.JK.user.Profile.username = fromData.username;
+        $.JK.user.Profile.email = fromData.email;
+        $.JK.user.Profile.credentials[0].value = fromData.pswd;
+
+        return $.JK.user.Profile;
+    }
 
 })(jQuery);

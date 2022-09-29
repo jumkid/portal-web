@@ -1,15 +1,24 @@
 /* General Element Styles */
 body {
-	font: 12px arial,verdana,sans-serif;
-	padding: 0px;
-	margin: 0px;
-	background:#000000;		
+	font: 12px cera-round-pro, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	padding: 0;
+	margin: 0;
+	background: #111;
 }
 a {
 	color: #FFFFFF;
 }
 a:hover {
 	color: #C41407;
+}
+a img {
+	border:0;
+}
+blockquote {
+	font-style:italic;
+	margin:5px;
+	border-left:5px solid #C41407;
+	padding-left:5px;
 }
 h2 {
 	margin-top:0;
@@ -28,13 +37,13 @@ input {
 	border: 1px solid #bbb;
 	box-shadow: -1px 0 1px rgba(0,0,0,0.25);
 	font: inherit;
-	font-size: 14px;
+	font-size: 18px;
 	height: 20px;
 	margin: 0;
 	-moz-border-radius: 10px;
 	-moz-box-shadow: -1px 0 1px rgba(0,0,0,0.25);
 	outline: none;
-	padding: 10px 5px;
+	padding: 10px 15px;
 	position: relative;
 	-webkit-border-radius: 10px;
 	-webkit-box-shadow: -1px 0 1px rgba(0,0,0,0.25);
@@ -60,77 +69,40 @@ button {
 	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.25);
 	width: auto;
 }
-
-#wrap {
-	clear: both;
-	width: 100%;
-	height: 100vh;
-	padding: 0px 0px 0px 0px;	
-	margin: 0px 0px 0px 0px;
-	background-color: #8F939F;
+img.centered {
+	display: block;
 }
-#main-container {
-	width: 100%;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
 }
-#content-about {
-	height: 100%;
-	padding: 18px 0px 18px 20px;
-	margin: 0px 0px 0px 0px;
-	color: #ffffff;
-	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;
-}
-#content-car-owner {
-	height: 100%;
-	padding: 18px 0px 18px 20px;
-	margin: 0px 0px 0px 0px;
-	color: #ffffff;
-	background:url(../images/wp-owner-garage.jpg) no-repeat top center #000000;
-}
-#content-professional {
-	height: 100%;
-	padding: 18px 0px 18px 20px;
-	margin:0px 0px 0px 0px;
-	color: #ffffff;
-	background:url(../images/wp-workshop.jpg) no-repeat top center #000000;
-}
-#content-privacy {
-	font-size: 18px;
-	padding: 18px 0px 18px 20px;
-	margin: 0px 0px 0px 0px;
-	color: #000000;
-	background-color: #000000;
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
 }
 
-#content-center {
-	margin: auto;
-	border: 0px solid rgb(255, 255, 255);
-	border-radius: 25px;
-	padding: 20px 20px;
-	background-color: rgb(0, 0, 0, 0.5);
+form {
+	font-size: 16px;
+	border-radius: 10px;
+	margin: 40px auto;
+	-moz-border-radius: 10px;
+	overflow: hidden;
+	padding: 40px;
+	-webkit-border-radius: 10px;
 }
-#content-center div {
-	margin: 5px 5px;
-}
-#content-west {
-	float: left;
-	height: 100%;
-}
-#content-east {
-	float: left;
-	height: 100%;
-}
-  
-#header {
+
+/* header */
+header {
 	height: 53px;
-    width: 100%;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    float: none;
-	background-color: #D0282F;
+	width: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	float: none;
+	background-color: #C41407;
 }
-#header h1 
+header h1
 {
 	font:36px 'times new roman';
 	text-align:center;
@@ -139,95 +111,118 @@ button {
 	font-weight:bold;
 	width:350px;
 }
-#header h1, h1 a, h1 a:visited {
+header h1, h1 a, h1 a:visited {
 	text-decoration: none;
 	margin:0;
 	color:#ffffff;
 }
-#header h1 a:hover {
+header h1 a:hover {
 	text-decoration: none;
 	color:#ffffff;
 }
+header .navigation-logo {
+	float: left;
+	display: block;
+	height: 38px;
+	width: 128px;
+	padding: 0 0 0 0;
+	margin: 4px 6px 0 16px;
+	background: url(../images/logo-jumkid-white.png) no-repeat top left;
+	background-size: contain;
+}
+/* header end*/
 
-#navigation-container{
-	padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    height: 100%;
-    width: 100%;
-}
-#navigation-logo{
+/* navigation */
+nav{
 	float: left;
-    display: block;
-    height: 38px;
-    width: 128px;
-    padding: 0px 0px 0px 0px;
-    margin: 4px 6px 0px 16px;
-    background: url(../images/logo-jumkid-white.png) no-repeat top left;
-    background-size: contain;
+	display: block;
+	height: 100%;
+	font-size: 16px;
+	padding: 0 0;
+	margin: 0 38px 0 338px;
+	font-family: Verdana, arial, serif;
 }
-#navigation{
-	float: left;
-    display: block;
-    height: 100%;
-    font-size: 16px;
-    padding: 0px 0px;
-    margin: 0px 38px 0px 338px;
-    font-family: Verdana,arial;
-}
-#navigation ul{
-	margin: 0px 0px;
-	padding: 0px 0px 0px 20px;
+nav ul{
+	margin: 0 0;
+	padding: 0 0 0 20px;
 	list-style-type: none;
 	width: auto;
 	float: left;
 }
-#navigation ul li{
+nav ul li{
 	display: block;
 	float: left;
-	margin: 0px 0px;
-	padding: 0px 0px;
+	margin: 0 0;
+	padding: 0 0;
 }
-#navigation ul li a{
+nav ul li a{
 	display:block;
 	float:left;
 	color:#ffffff;
 	height: 36px;
-	padding: 17px 10px 0px 10px;
+	padding: 17px 10px 0 10px;
 	text-align: center;
 	text-decoration:none;
 }
-#navigation ul li a:hover, #navigation ul li.current_page_item a{
+nav ul li a:hover, nav ul li.current_page_item a{
 	color: #4d4d4d;
-    background-color: #f4d2cb;
-    text-align: center;
-	padding: 17px 10px 0px 10px;
+	background-color: #f4d2cb;
+	text-align: center;
+	padding: 17px 10px 0 10px;
 }
-	
-footer {
+/* navigation end*/
+
+#wrap {
 	clear: both;
-	color: #555555;
-	font: 12px arial,verdana,sans-serif;
-	text-align:left;
-	height: 106px;
-	position: relative;
 	width: 100%;
-	margin: 0px 0px 0px 0px;
-	background-color: #8F939F;
+	height: 100vh;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
 }
-.footerlinks 
-{
-	color:#ffffff;
-	text-align:left;
-	margin-top:50px;
-	padding-left:50px;
-	float:left;
 
+#content-about {
+	padding: 18px 0 18px 20px;
+	margin: 0 0 0 0;
+	color: #ffffff;
+	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;
 }
-.footerlinks  a
-{
-	color:#e5e5e5;
-	text-decoration:underline;
+#content-car-owner {
+	padding: 18px 0 18px 20px;
+	margin: 0 0 0 0;
+	color: #ffffff;
+	background:url(../images/wp-owner-garage.jpg) no-repeat top center #000000;
+}
+#content-professional {
+	padding: 18px 0 18px 20px;
+	margin: 0 0 0 0;
+	color: #ffffff;
+	background:url(../images/wp-workshop.jpg) no-repeat top center #000000;
+}
+#content-privacy {
+	font-size: 18px;
+	padding: 18px 0 18px 20px;
+	margin: 0 0 0 0;
+	color: #000000;
+	background-color: #000000;
+}
 
+section.content-center {
+	margin: auto;
+	border: 0 solid rgb(255, 255, 255);
+	border-radius: 25px;
+	padding: 20px 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+section.content-center div {
+	margin: 5px 5px;
+}
+section.content-west {
+	float: left;
+	height: 100%;
+}
+section.content-east {
+	float: left;
+	height: 100%;
 }
 
 /* feature-bar and badge */
@@ -235,8 +230,8 @@ footer {
 	display: inline-block;
 	width: 393px;
 	height: 104px;
-	margin: 0px 5px;
-	padding: 0px 0px 0px 0px;
+	margin: 0 5px;
+	padding: 0 0 0 0;
 	background-color: #ffffff;
 	border-radius: 56px 56px 56px 56px;
 	color: #000000;
@@ -298,39 +293,59 @@ footer {
 }
 
 /* Signup form */
-form {
-	background: #777;
-	border-radius: 10px;
-	margin: 40px auto;
-	-moz-border-radius: 10px;
-	overflow: hidden;
-	padding: 40px;
-	-webkit-border-radius: 10px;
-	width: 600px;
-}
-#signup_form {
+#signup-form {
+	width: 780px;
 	list-style: none;
+	background-color: rgba(0, 0, 0, 0.66);
 }
-#signup_form li {
+#signup-form ol {
+	margin: 20px 0 30px 0;
+	padding: 0 0 0 0;
+}
+#signup-form li {
 	position: relative;
 	margin-bottom: 5px;
 	overflow: hidden;
 	width: 100%;
 }
-#signup_form input {
+#signup-form input {
 	float: left;
+	width: 248px;
 }
-#signup_form button {
+#signup-form button {
 	margin: 28px 0 0 279px;
+	font-weight: bold;
 }
-#signup_form label {
+#signup-form button:hover {
+	background-color: #C41407;
+	color: #eee;
+}
+#signup-form button:active {
+	background-color: #eee;
+	color: #777;
+}
+#signup-form label {
 	background: #cecece;
 	cursor: pointer;
 	display: block;
 	margin: 7px 0 0;
 }
+#signup-form label.error {
+	color: #FFF;
+	padding: 3px 10px 3px 5px;
+	font-size: 13px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	float: left;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	max-width: 190px;
+	background-color: #C41407;
+}
 .label-left {
-	color: #000;
+	color: #666;
 	padding: 5px 15px 5px 10px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -341,20 +356,7 @@ form {
 	text-transform: uppercase;
 	-webkit-border-top-left-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
-	width: 130px;
-}
-#signup_form label.error {
-	color: #C41407;
-	padding: 3px 5px 3px 5px;
-	font-size: 13px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	float: left;
-	-moz-border-radius-topright: 10px;
-	-moz-border-radius-bottomright: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-webkit-border-bottom-right-radius: 10px;
-	max-width: 190px;
+	width: 188px;
 }
 .show-password-link {
 	display: block;
@@ -379,7 +381,7 @@ form {
 {
 	float:left; 
 	width:600px; 	
-	margin-top:0px;
+	margin-top: 0;
 }
 .post {
 	width:594px;
@@ -388,7 +390,7 @@ form {
 	color:#323232;
 	float:none;
 	display:block;
-	margin-bottom:30px;	
+	margin-bottom: 30px;
 	clear:both;	
 	background:url(../images/post-bg.gif) repeat-y left ;
 }
@@ -401,7 +403,7 @@ form {
 }
 
 .post p {
-	margin:0px;
+	margin: 0;
 }
 
 
@@ -450,7 +452,7 @@ form {
 	background:url(../images/filled.gif) no-repeat left;
 	padding-left:18px;
 	padding-bottom:10px;
-	margin-right:0px;
+	margin-right: 0;
 }
 
 .postinfo .published {
@@ -459,7 +461,7 @@ form {
 	padding-left:20px;
 	width:120px;
 	padding-bottom:10px;
-	margin-right:0px;
+	margin-right: 0;
 }
 
 .postbottom {
@@ -498,12 +500,12 @@ form {
 }
 
 .navigation a {
-	color:#A90101;
+	color:#C41407;
 	text-decoration:none;
 }
 .navigation a:hover 
 {
-	color:#A90101;
+	color:#C41407;
 	text-decoration:underline;
 }
 
@@ -513,19 +515,7 @@ form {
 	float:left;
 	font-size:12px;
 }
-img.centered {
-	display: block;
-}
-img.alignright {
-	padding: 4px;
-	margin: 0 0 2px 7px;
-	display: inline;
-}
-img.alignleft {
-	padding: 4px;
-	margin: 0 7px 2px 0;
-	display: inline;
-}
+
 .alignright {
 	float: right;
 }
@@ -544,17 +534,8 @@ img.alignleft {
 	margin-top:0;	
 	margin-bottom:5px;
 	text-align:left;
-	color:#A90101;
+	color:#C41407;
 	overflow:visible
-}
-blockquote {
-	font-style:italic;
-	margin:5px;
-	border-left:5px solid #CD0100;
-	padding-left:5px;
-}
-a img {
-	border:0;
 }
 .entry {
 	font: 12px arial,verdana,sans-serif;
@@ -585,9 +566,9 @@ float:left;
 
 #sidebar {
 	width:160px;
-	padding-left:0px;
-	margin-top:0px;
-	margin-left:0px;
+	padding-left: 0;
+	margin-top: 0;
+	margin-left: 0;
 	float:left;
 }
 
@@ -603,7 +584,7 @@ float:left;
 	color:#ffffff;
 	text-align:center;
 	font-weight:bold;
-	padding:10px 0 0 0px;
+	padding:10px 0 0 0;
 	height:33px;
 	margin:0;
 	border:none;
@@ -622,11 +603,11 @@ float:left;
 }
 #sidebar ul ul li {
 	list-style-type: none;
-	margin-left:0px;
+	margin-left: 0;
 	list-style-image: none;
 	color:#c4c4c4;
-	padding:5px 0 5px 0px;
-	margin-left:10px;
+	padding:5px 0 5px 0;
+	margin-left: 10px;
 	font:12px arial;
 	width:150px;
 	
@@ -654,8 +635,8 @@ float:left;
 #sidebar2 {
 	width:160px;
 	padding-left:20px;
-	margin-top:0px;
-	margin-left:0px;
+	margin-top: 0;
+	margin-left: 0;
 	float:left;
 }
 
@@ -671,7 +652,7 @@ float:left;
 	color:#ffffff;
 	text-align:center;
 	font-weight:bold;
-	padding:10px 0 0 0px;
+	padding:10px 0 0 0;
 	height:33px;
 	margin:0;
 	border:none;
@@ -690,10 +671,10 @@ float:left;
 }
 #sidebar2 ul ul li {
 	list-style-type: none;
-	margin-left:0px;
+	margin-left: 0;
 	list-style-image: none;
 	color:#c4c4c4;
-	padding:5px 0 5px 0px;
+	padding:5px 0 5px 0;
 	margin-left:10px;
 	font:12px arial;
 	width:150px;
@@ -743,33 +724,6 @@ border:1px solid #333333;
 margin-bottom:5px;
 }
 
-ol.commentlist {
-	margin-left:25px;
-	padding:0;
-}
-
-ol.commentlist a {
-	color:#c4c4c4;	
-}
-ol.commentlist p {
-	margin-top:3px;
-	margin-bottom:10px;
-}
-small.commentmetadata {
-	font: 10px arial,verdana,sans-serif;
-}
-small.commentmetadata a {
-	text-decoration:none;
-}
-#submit {
-	height: 25px;
-	background-color: #D6E5BD;
-	margin: 10px 10px 0 0;
-	color:#ffffff;
-	font-size: 1.2em;
-
-}
-
 /************************/
 /*     Search Design    */
 /************************/
@@ -814,3 +768,31 @@ float:left;
 	top:-1px;
 	font-weight:bold;
 }
+
+/* footer */
+footer {
+	clear: both;
+	color: #555555;
+	font: 12px arial,verdana,sans-serif;
+	text-align:left;
+	height: 106px;
+	position: relative;
+	width: 100%;
+	margin: 0 0 0 0;
+}
+.footer-links
+{
+	color:#ffffff;
+	text-align:left;
+	margin-top:50px;
+	padding-left:50px;
+	float:left;
+
+}
+.footer-links  a
+{
+	color:#e5e5e5;
+	text-decoration:underline;
+
+}
+/* footer end*/
