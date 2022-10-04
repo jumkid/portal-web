@@ -102,7 +102,7 @@ header {
 	float: none;
 	background-color: #C41407;
 }
-header h1
+header > h1
 {
 	font:36px 'times new roman';
 	text-align:center;
@@ -111,16 +111,16 @@ header h1
 	font-weight:bold;
 	width:350px;
 }
-header h1, h1 a, h1 a:visited {
+header > h1, h1 a, h1 a:visited {
 	text-decoration: none;
 	margin:0;
 	color:#ffffff;
 }
-header h1 a:hover {
+header > h1 a:hover {
 	text-decoration: none;
 	color:#ffffff;
 }
-header .navigation-logo {
+header > div.navigation-logo {
 	float: left;
 	display: block;
 	height: 38px;
@@ -129,11 +129,12 @@ header .navigation-logo {
 	margin: 4px 6px 0 16px;
 	background: url(../images/logo-jumkid-white.png) no-repeat top left;
 	background-size: contain;
+	cursor: pointer;
 }
 /* header end*/
 
 /* navigation */
-nav{
+nav {
 	float: left;
 	display: block;
 	height: 100%;
@@ -142,20 +143,20 @@ nav{
 	margin: 0 38px 0 338px;
 	font-family: Verdana, arial, serif;
 }
-nav ul{
+nav > ul {
 	margin: 0 0;
 	padding: 0 0 0 20px;
 	list-style-type: none;
 	width: auto;
 	float: left;
 }
-nav ul li{
+nav > ul li {
 	display: block;
 	float: left;
 	margin: 0 0;
 	padding: 0 0;
 }
-nav ul li a{
+nav > ul li a {
 	display:block;
 	float:left;
 	color:#ffffff;
@@ -164,7 +165,7 @@ nav ul li a{
 	text-align: center;
 	text-decoration:none;
 }
-nav ul li a:hover, nav ul li.current_page_item a{
+nav > ul li a:hover, nav ul li.current_page_item a {
 	color: #4d4d4d;
 	background-color: #f4d2cb;
 	text-align: center;
@@ -172,7 +173,7 @@ nav ul li a:hover, nav ul li.current_page_item a{
 }
 /* navigation end*/
 
-#wrap {
+div#wrap {
 	clear: both;
 	width: 100%;
 	height: 100vh;
@@ -180,30 +181,36 @@ nav ul li a:hover, nav ul li.current_page_item a{
 	margin: 0 0 0 0;
 }
 
-#content-about {
+main#content-about {
 	padding: 18px 0 18px 20px;
 	margin: 0 0 0 0;
 	color: #ffffff;
 	background:url(../images/center-wallpaper.jpeg) no-repeat top center #000000;
 }
-#content-car-owner {
+main#content-car-owner {
 	padding: 18px 0 18px 20px;
 	margin: 0 0 0 0;
 	color: #ffffff;
 	background:url(../images/wp-owner-garage.jpg) no-repeat top center #000000;
 }
-#content-professional {
+main#content-professional {
 	padding: 18px 0 18px 20px;
 	margin: 0 0 0 0;
 	color: #ffffff;
 	background:url(../images/wp-workshop.jpg) no-repeat top center #000000;
 }
-#content-privacy {
+main#content-privacy {
 	font-size: 18px;
 	padding: 18px 0 18px 20px;
 	margin: 0 0 0 0;
 	color: #000000;
 	background-color: #000000;
+}
+main#content-signin {
+	padding: 18px 0 18px 20px;
+	margin: 0 0 0 0;
+	color: #ffffff;
+	background:url(../images/garage-wallpaper.jpg) no-repeat top center #888;
 }
 
 section.content-center {
@@ -226,7 +233,7 @@ section.content-east {
 }
 
 /* feature-bar and badge */
-.feature-bar {
+div.feature-bar {
 	display: inline-block;
 	width: 393px;
 	height: 104px;
@@ -237,12 +244,12 @@ section.content-east {
 	color: #000000;
 	vertical-align: middle;
 }
-.feature-bar-title {
+div.feature-bar-title {
 	float: left;
 	padding: 40px 10px;
 	font-size: 24px;
 }
-.badge {
+div.badge {
 	float: left;
 	width: 83px;
 	height: 83px;
@@ -257,7 +264,7 @@ section.content-east {
 
 /* feature-bar & badge end */
 
-.signup-button {
+div.signup-button {
 	width: 123px;
 	height: 38px;
 	margin: 7px 13px;
@@ -269,7 +276,7 @@ section.content-east {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-.login-button {
+div.login-button {
 	float: right;
     width: 93px;
     height: 38px;
@@ -282,55 +289,55 @@ section.content-east {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.login-button a, .signup-button a{
+div.login-button a, .signup-button a{
 	color: #000000;
     margin-left: 40px;
     font-size: 18px;
     line-height: 36px;
 }
-.login-button a:hover, .signup-button a:hover{
+div.login-button a:hover, .signup-button a:hover{
 	color: #C41407;
 }
 
 /* Signup form */
-#signup-form {
+form.signup-form {
 	width: 780px;
 	list-style: none;
 	background-color: rgba(0, 0, 0, 0.66);
 }
-#signup-form ol {
+form.signup-form ol {
 	margin: 20px 0 30px 0;
 	padding: 0 0 0 0;
 }
-#signup-form li {
+form.signup-form li {
 	position: relative;
 	margin-bottom: 5px;
 	overflow: hidden;
 	width: 100%;
 }
-#signup-form input {
+form.signup-form input {
 	float: left;
 	width: 248px;
 }
-#signup-form button {
+form.signup-form button {
 	margin: 28px 0 0 279px;
 	font-weight: bold;
 }
-#signup-form button:hover {
+form.signup-form button:hover {
 	background-color: #C41407;
 	color: #eee;
 }
-#signup-form button:active {
+form.signup-form button:active {
 	background-color: #eee;
 	color: #777;
 }
-#signup-form label {
+form.signup-form label {
 	background: #cecece;
 	cursor: pointer;
 	display: block;
 	margin: 7px 0 0;
 }
-#signup-form label.error {
+form.signup-form label.error {
 	color: #FFF;
 	padding: 3px 10px 3px 5px;
 	font-size: 13px;
@@ -344,7 +351,7 @@ section.content-east {
 	max-width: 190px;
 	background-color: #C41407;
 }
-.label-left {
+label.label-left {
 	color: #666;
 	padding: 5px 15px 5px 10px;
 	border-top-left-radius: 10px;
@@ -498,36 +505,6 @@ section.content-east {
 	padding:13px 0 0 20px;
 	margin-left:7px;
 }
-
-.navigation a {
-	color:#C41407;
-	text-decoration:none;
-}
-.navigation a:hover 
-{
-	color:#C41407;
-	text-decoration:underline;
-}
-
-.navigation {
-	text-align:left;
-	width:530px;
-	float:left;
-	font-size:12px;
-}
-
-.alignright {
-	float: right;
-}
-.alignleft {
-	float: left
-}
-.navigation .alignright {
-	margin-bottom:10px;
-}
-.navigation .alignleft {
-	margin-bottom:10px;
-}	
 
 .pagetitle{
 	font: bold 26px verdana;

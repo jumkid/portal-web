@@ -25,7 +25,7 @@
         //     linkTopOffset: 11
         // });
         const signupFormId = "signup-form";
-        const signupForm = $("#" + signupFormId);
+        const signupForm = $("." + signupFormId);
 
         $.validator.addMethod("checkUppercase", function(value) {
             return /^(?=.*[A-Z])/.test(value);

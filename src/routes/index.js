@@ -2,13 +2,13 @@ import express from 'express';
 
 const router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-    res.render('car-owner', {
+/* GET home page. */
+router.get('/', (req, res) => {
+    res.render('index', {
         layout: 'main',
         title: 'Jumkid',
-        navTabCarOwner: true
-  });
+        navTabIndex: true,
+    });
 });
 
 export default router;

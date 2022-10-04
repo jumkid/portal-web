@@ -13,6 +13,7 @@
         API: {
             HOST: 'http://localhost',
             USER: {
+                LOGIN: '/v1/user/login',
                 SIGNUP: '/v1/user/signup',
                 VALIDATE: '/v1/user/validate'
             }
@@ -98,5 +99,9 @@
         }
 
     };
+
+    function goTo(url) {
+        $(location).attr('href', url);
+    }
 
 })(jQuery);
